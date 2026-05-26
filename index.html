@@ -925,6 +925,215 @@
     position: relative;
     overflow: hidden;
   }
+
+  /* =====================
+     HAMBURGER MENU
+  ===================== */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--forest);
+    transition: all 0.3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--cream);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .nav-mobile-menu.open { display: flex; }
+  .nav-mobile-menu a {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--forest);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .nav-mobile-menu a:hover { color: var(--gold); }
+  .nav-mobile-menu .mobile-cta {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--forest);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    margin-top: 1rem;
+  }
+
+  /* =====================
+     TABLET — max 1024px
+  ===================== */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2rem; }
+    nav.scrolled { padding: 0.9rem 2rem; }
+    .nav-links { gap: 1.5rem; }
+
+    .hero { grid-template-columns: 1fr 1fr; padding-top: 70px; }
+    .hero-left { padding: 3rem 2rem 3rem 2.5rem; }
+    .hero h1 { font-size: clamp(2.8rem, 4vw, 4rem); }
+    .hero-stats { gap: 2rem; margin-top: 3rem; }
+
+    .about { grid-template-columns: 1fr 1fr; }
+    .about-content { padding: 4rem 2.5rem; }
+
+    .services { padding: 6rem 2rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .philosophy { grid-template-columns: 1fr 1fr; }
+    .philosophy-content { padding: 4rem 2.5rem; }
+
+    .testimonials { padding: 6rem 2rem; }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid .testimonial-card:last-child {
+      grid-column: 1 / -1;
+      max-width: 500px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 260px 260px; }
+    .gallery-item:first-child { grid-row: 1 / 2; grid-column: 1 / -1; }
+
+    .cta-section { padding: 7rem 2.5rem; }
+    .contact { grid-template-columns: 1fr 1fr; }
+    .contact-info { padding: 4rem 2.5rem; }
+    .contact-form { padding: 4rem 2.5rem; }
+
+    footer { padding: 2rem 2rem; }
+  }
+
+  /* =====================
+     MOBILE — max 768px
+  ===================== */
+  @media (max-width: 768px) {
+    /* NAV MOBILE */
+    nav { padding: 1rem 1.5rem; }
+    nav.scrolled { padding: 0.8rem 1.5rem; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+
+    /* HERO MOBILE — stacked */
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 55vw;
+      min-height: auto;
+      padding-top: 65px;
+    }
+    .hero-left {
+      padding: 2.5rem 1.5rem 2rem;
+      order: 1;
+    }
+    .hero-right {
+      order: 2;
+      min-height: 55vw;
+    }
+    .hero h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); }
+    .hero-eyebrow { font-size: 0.6rem; margin-bottom: 1rem; }
+    .hero-sub { font-size: 0.85rem; margin-bottom: 2rem; max-width: 100%; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .hero-stats { margin-top: 2.5rem; gap: 1.5rem; }
+    .hero-stat-num { font-size: 1.8rem; }
+    .hero-tag { display: none; }
+
+    /* ABOUT MOBILE */
+    .about { grid-template-columns: 1fr; }
+    .about-img-col { height: 65vw; min-height: 260px; }
+    .about-badge { display: none; }
+    .about-content { padding: 2.5rem 1.5rem; }
+    .about-content h2 { font-size: 2rem; }
+
+    /* SERVICES MOBILE */
+    .services { padding: 4rem 1.5rem; }
+    .services-header { margin-bottom: 3rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 2.5rem 2rem; }
+
+    /* PHILOSOPHY MOBILE */
+    .philosophy { grid-template-columns: 1fr; }
+    .philosophy-content { padding: 3rem 1.5rem; order: 1; }
+    .philosophy-visual { min-height: 60vw; order: 2; }
+    .philosophy-quote { bottom: 2rem; left: 1.5rem; right: 1.5rem; }
+    .philosophy-quote p { font-size: 1.1rem; }
+
+    /* TESTIMONIALS MOBILE */
+    .testimonials { padding: 4rem 1.5rem; }
+    .testimonials-header { margin-bottom: 3rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-grid .testimonial-card:last-child {
+      grid-column: auto;
+      max-width: 100%;
+    }
+
+    /* GALLERY MOBILE */
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vw 40vw 40vw;
+    }
+    .gallery-item:first-child { grid-row: 1 / 2; grid-column: 1 / -1; }
+    .gallery-item-label { opacity: 1; }
+    .gallery-item-overlay { background: rgba(44,59,45,0.2); }
+
+    /* CTA MOBILE */
+    .cta-section { padding: 5rem 1.5rem; }
+    .cta-actions { flex-direction: column; gap: 1rem; }
+    .btn-large, .btn-outline { width: 100%; text-align: center; padding: 1rem 1.5rem; }
+
+    /* CONTACT MOBILE */
+    .contact { grid-template-columns: 1fr; }
+    .contact-info { padding: 3rem 1.5rem 2rem; }
+    .contact-info h2 { font-size: 2rem; }
+    .contact-form { padding: 2rem 1.5rem 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-submit { width: 100%; text-align: center; }
+
+    /* FOOTER MOBILE */
+    footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .footer-copy { order: 3; }
+  }
+
+  /* =====================
+     SMALL MOBILE — max 480px
+  ===================== */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+    .hero-stats { flex-wrap: wrap; gap: 1.2rem; }
+    .gallery {
+      grid-template-columns: 1fr;
+      grid-template-rows: 65vw 55vw 55vw 55vw 55vw;
+    }
+    .gallery-item:first-child { grid-column: 1; }
+    .services-header h2 { font-size: 2rem; }
+    .cta-section h2 { font-size: 2.2rem; }
+    .philosophy-content h2 { font-size: 1.8rem; }
+  }
 </style>
 </head>
 <body>
@@ -940,7 +1149,20 @@
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <a href="#kontakt" class="nav-cta">Umów wizytę</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#o-mnie">O mnie</a>
+  <a href="#uslugi">Usługi</a>
+  <a href="#filozofia">Filozofia</a>
+  <a href="#opinie">Opinie</a>
+  <a href="#kontakt">Kontakt</a>
+  <a href="#kontakt" class="mobile-cta">Umów wizytę</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -977,41 +1199,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap">
-      <svg width="100%" height="100%" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <radialGradient id="hg1" cx="50%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#D4B47A" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="#2C3B2D" stop-opacity="0.6"/>
-          </radialGradient>
-          <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#EDE8E0"/>
-            <stop offset="100%" stop-color="#C8BEA8"/>
-          </linearGradient>
-        </defs>
-        <rect width="800" height="900" fill="url(#hg2)"/>
-        <ellipse cx="400" cy="280" rx="180" ry="220" fill="rgba(184,151,90,0.12)"/>
-        <ellipse cx="400" cy="320" rx="140" ry="200" fill="rgba(44,59,45,0.08)"/>
-        <!-- Stylized figure silhouette -->
-        <ellipse cx="400" cy="160" rx="75" ry="88" fill="#C8BEA8"/>
-        <path d="M270 380 Q290 280 400 280 Q510 280 530 380 L560 700 Q500 740 400 740 Q300 740 240 700 Z" fill="#BFBA9F"/>
-        <path d="M270 380 Q260 450 220 550 Q200 600 220 640 Q260 640 280 590 Q310 520 330 450 Z" fill="#C8BEA8"/>
-        <path d="M530 380 Q540 450 580 550 Q600 600 580 640 Q540 640 520 590 Q490 520 470 450 Z" fill="#C8BEA8"/>
-        <!-- Plant/leaf decoration -->
-        <path d="M80 750 Q120 700 100 640 Q80 700 40 720 Z" fill="rgba(44,59,45,0.4)"/>
-        <path d="M100 760 Q150 700 130 630 Q100 710 60 740 Z" fill="rgba(44,59,45,0.3)"/>
-        <path d="M60 780 Q100 730 90 670 Q60 730 20 760 Z" fill="rgba(44,59,45,0.25)"/>
-        <path d="M700 800 Q660 740 680 670 Q700 740 740 760 Z" fill="rgba(44,59,45,0.35)"/>
-        <path d="M680 810 Q630 745 650 670 Q680 750 720 780 Z" fill="rgba(44,59,45,0.25)"/>
-        <!-- Subtle texture dots -->
-        <circle cx="150" cy="200" r="3" fill="rgba(184,151,90,0.3)"/>
-        <circle cx="620" cy="150" r="2" fill="rgba(184,151,90,0.25)"/>
-        <circle cx="680" cy="400" r="4" fill="rgba(184,151,90,0.15)"/>
-        <circle cx="120" cy="500" r="3" fill="rgba(184,151,90,0.2)"/>
-        <!-- Overlay gradient -->
-        <rect width="800" height="900" fill="url(#hg1)"/>
-        <!-- Gold decorative line -->
-        <line x1="0" y1="900" x2="800" y2="900" stroke="#B8975A" stroke-width="2" opacity="0.4"/>
-      </svg>
+      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&q=80&fit=crop" alt="Agata Karwowska — Dietetyk Kliniczny">
     </div>
     <div class="hero-img-overlay"></div>
     <div class="hero-tag">
@@ -1042,49 +1230,7 @@
 <!-- ABOUT -->
 <section class="about" id="o-mnie">
   <div class="about-img-col">
-    <svg width="100%" height="100%" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="ag1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#EDE8E0"/>
-          <stop offset="100%" stop-color="#C8BEA8"/>
-        </linearGradient>
-      </defs>
-      <rect width="600" height="800" fill="url(#ag1)"/>
-      <!-- Abstract healthy food scene -->
-      <!-- Plate -->
-      <ellipse cx="300" cy="420" rx="200" ry="40" fill="rgba(255,255,255,0.6)"/>
-      <ellipse cx="300" cy="410" rx="185" ry="35" fill="rgba(255,255,255,0.9)"/>
-      <!-- Salad greens -->
-      <ellipse cx="280" cy="400" rx="60" ry="30" fill="rgba(61,80,64,0.7)" transform="rotate(-20 280 400)"/>
-      <ellipse cx="320" cy="390" rx="50" ry="25" fill="rgba(61,80,64,0.6)" transform="rotate(15 320 390)"/>
-      <ellipse cx="260" cy="385" rx="45" ry="20" fill="rgba(44,59,45,0.8)" transform="rotate(-35 260 385)"/>
-      <!-- Avocado halves -->
-      <ellipse cx="310" cy="395" rx="35" ry="25" fill="#8B9A42" transform="rotate(20 310 395)"/>
-      <ellipse cx="310" cy="393" rx="28" ry="20" fill="#A3B24E" transform="rotate(20 310 393)"/>
-      <ellipse cx="312" cy="392" rx="12" ry="9" fill="#5D4037" transform="rotate(20 312 392)"/>
-      <!-- Cherry tomatoes -->
-      <circle cx="240" cy="405" r="14" fill="#C0392B"/>
-      <circle cx="240" cy="405" r="10" fill="#E74C3C"/>
-      <circle cx="352" cy="400" r="12" fill="#C0392B"/>
-      <circle cx="352" cy="400" r="8" fill="#E74C3C"/>
-      <!-- Lemon slice -->
-      <circle cx="290" cy="408" r="18" fill="#F1C40F" opacity="0.8"/>
-      <circle cx="290" cy="408" r="14" fill="#F39C12" opacity="0.6"/>
-      <!-- Wine glass -->
-      <path d="M420 250 Q460 300 450 360 L440 370 L400 370 L390 360 Q380 300 420 250 Z" fill="rgba(255,255,255,0.5)"/>
-      <rect x="415" y="370" width="10" height="50" fill="rgba(255,255,255,0.4)"/>
-      <rect x="405" y="418" width="30" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
-      <!-- Herbs garnish -->
-      <path d="M150 300 Q180 260 170 220 Q160 260 130 280 Z" fill="rgba(44,59,45,0.5)"/>
-      <path d="M160 310 Q200 265 185 215 Q170 265 140 295 Z" fill="rgba(44,59,45,0.4)"/>
-      <path d="M140 295 Q165 255 155 210 Q145 255 115 280 Z" fill="rgba(44,59,45,0.35)"/>
-      <!-- Golden ratio circle decoration -->
-      <circle cx="300" cy="400" r="210" fill="none" stroke="rgba(184,151,90,0.15)" stroke-width="1"/>
-      <circle cx="300" cy="400" r="240" fill="none" stroke="rgba(184,151,90,0.1)" stroke-width="1"/>
-      <!-- Top text area -->
-      <rect x="60" y="60" width="200" height="2" fill="rgba(184,151,90,0.4)"/>
-      <rect x="60" y="80" width="140" height="1" fill="rgba(184,151,90,0.2)"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80&fit=crop" alt="Zdrowe jedzenie — dietetyka kliniczna" style="width:100%;height:100%;object-fit:cover;filter:saturate(0.85);">
     <div class="about-badge">Certyfikowany Dietetyk</div>
   </div>
   <div class="about-content fade-up">
@@ -1207,42 +1353,7 @@
     </div>
   </div>
   <div class="philosophy-visual">
-    <svg width="100%" height="100%" viewBox="0 0 700 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#2C3B2D"/>
-          <stop offset="100%" stop-color="#1a2b1b"/>
-        </linearGradient>
-        <radialGradient id="pg2" cx="40%" cy="40%" r="60%">
-          <stop offset="0%" stop-color="#B8975A" stop-opacity="0.2"/>
-          <stop offset="100%" stop-color="transparent"/>
-        </radialGradient>
-      </defs>
-      <rect width="700" height="800" fill="url(#pg1)"/>
-      <rect width="700" height="800" fill="url(#pg2)"/>
-      <!-- Botanical illustration -->
-      <!-- Stem -->
-      <path d="M350 750 Q350 500 350 200" stroke="rgba(184,151,90,0.4)" stroke-width="2" fill="none"/>
-      <!-- Large leaves -->
-      <path d="M350 500 Q250 450 220 380 Q290 410 350 500 Z" fill="rgba(44,59,45,0.8)"/>
-      <path d="M350 500 Q450 450 480 380 Q410 410 350 500 Z" fill="rgba(61,80,64,0.7)"/>
-      <path d="M350 380 Q230 320 200 250 Q280 290 350 380 Z" fill="rgba(44,59,45,0.7)"/>
-      <path d="M350 380 Q470 320 500 250 Q420 290 350 380 Z" fill="rgba(61,80,64,0.6)"/>
-      <path d="M350 280 Q270 240 250 180 Q310 210 350 280 Z" fill="rgba(44,59,45,0.6)"/>
-      <path d="M350 280 Q430 240 450 180 Q390 210 350 280 Z" fill="rgba(61,80,64,0.5)"/>
-      <!-- Flower/fruit at top -->
-      <circle cx="350" cy="160" r="40" fill="rgba(184,151,90,0.2)"/>
-      <circle cx="350" cy="160" r="28" fill="rgba(184,151,90,0.3)"/>
-      <circle cx="350" cy="160" r="16" fill="rgba(184,151,90,0.5)"/>
-      <!-- Small decorative dots -->
-      <circle cx="200" cy="620" r="3" fill="rgba(184,151,90,0.3)"/>
-      <circle cx="500" cy="600" r="2" fill="rgba(184,151,90,0.2)"/>
-      <circle cx="150" cy="400" r="4" fill="rgba(184,151,90,0.15)"/>
-      <circle cx="550" cy="350" r="3" fill="rgba(184,151,90,0.2)"/>
-      <!-- Concentric circles -->
-      <circle cx="350" cy="400" r="280" fill="none" stroke="rgba(184,151,90,0.06)" stroke-width="1"/>
-      <circle cx="350" cy="400" r="320" fill="none" stroke="rgba(184,151,90,0.04)" stroke-width="1"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&q=80&fit=crop" alt="Filozofia zdrowego żywienia" style="width:100%;height:100%;object-fit:cover;">
     <div class="philosophy-visual-overlay"></div>
     <div class="philosophy-quote">
       <p>„Zdrowie nie jest stanem — to codzienna, świadoma decyzja."</p>
@@ -1314,102 +1425,31 @@
 <!-- GALLERY -->
 <div class="gallery" aria-label="Galeria">
   <div class="gallery-item">
-    <svg width="100%" height="100%" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <rect width="500" height="600" fill="#EDE8E0"/>
-      <ellipse cx="250" cy="300" rx="160" ry="40" fill="rgba(255,255,255,0.7)"/>
-      <ellipse cx="250" cy="290" rx="145" ry="35" fill="rgba(255,255,255,0.95)"/>
-      <ellipse cx="230" cy="278" rx="55" ry="28" fill="#8B9A42" transform="rotate(-15 230 278)"/>
-      <ellipse cx="270" cy="270" rx="45" ry="22" fill="#3D5040" transform="rotate(20 270 270)"/>
-      <circle cx="200" cy="288" r="18" fill="#E74C3C" opacity="0.9"/>
-      <circle cx="295" cy="283" r="14" fill="#F39C12" opacity="0.9"/>
-      <circle cx="250" cy="295" r="22" fill="#F1C40F" opacity="0.7"/>
-      <path d="M100 100 Q140 50 120 10 Q100 50 60 70 Z" fill="rgba(44,59,45,0.5)"/>
-      <path d="M120 110 Q170 55 145 5 Q115 55 75 85 Z" fill="rgba(44,59,45,0.4)"/>
-      <rect x="230" y="0" width="1" height="600" stroke="rgba(184,151,90,0.1)" stroke-width="0.5"/>
-      <circle cx="250" cy="300" r="200" fill="none" stroke="rgba(184,151,90,0.12)" stroke-width="1"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=900&q=80&fit=crop" alt="Zdrowe żywienie" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
     <div class="gallery-item-overlay">
       <div class="gallery-item-label">Zdrowe żywienie</div>
     </div>
   </div>
   <div class="gallery-item">
-    <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="300" fill="#C8BEA8"/>
-      <rect x="80" y="40" width="240" height="220" rx="4" fill="rgba(255,255,255,0.5)"/>
-      <rect x="100" y="60" width="200" height="180" rx="2" fill="rgba(255,255,255,0.8)"/>
-      <!-- Notebook/consultation scene -->
-      <rect x="115" y="75" width="170" height="2" rx="1" fill="rgba(44,59,45,0.2)"/>
-      <rect x="115" y="85" width="140" height="2" rx="1" fill="rgba(44,59,45,0.15)"/>
-      <rect x="115" y="95" width="155" height="2" rx="1" fill="rgba(44,59,45,0.2)"/>
-      <rect x="115" y="105" width="120" height="2" rx="1" fill="rgba(44,59,45,0.15)"/>
-      <!-- Chart -->
-      <polyline points="115,180 140,160 165,165 190,140 215,145 240,120 265,125 285,105" fill="none" stroke="#B8975A" stroke-width="2.5"/>
-      <circle cx="285" cy="105" r="5" fill="#B8975A"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&fit=crop" alt="Konsultacja dietetyczna" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
     <div class="gallery-item-overlay">
       <div class="gallery-item-label">Konsultacja</div>
     </div>
   </div>
   <div class="gallery-item">
-    <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="300" fill="#D4C9B5"/>
-      <!-- Smoothie bowl top view -->
-      <ellipse cx="200" cy="160" rx="140" ry="50" fill="rgba(255,255,255,0.7)"/>
-      <ellipse cx="200" cy="155" rx="125" ry="44" fill="#E8D5C4"/>
-      <ellipse cx="200" cy="152" rx="110" ry="40" fill="#F5C4A0" opacity="0.9"/>
-      <!-- Toppings -->
-      <ellipse cx="170" cy="140" rx="25" ry="8" fill="rgba(61,80,64,0.7)" transform="rotate(-20 170 140)"/>
-      <ellipse cx="230" cy="145" rx="20" ry="7" fill="rgba(44,59,45,0.6)" transform="rotate(15 230 145)"/>
-      <circle cx="180" cy="155" r="10" fill="#E74C3C" opacity="0.8"/>
-      <circle cx="215" cy="148" r="8" fill="#E74C3C" opacity="0.8"/>
-      <circle cx="200" cy="162" r="7" fill="#8B9A42" opacity="0.9"/>
-      <!-- Seeds/granola dots -->
-      <circle cx="190" cy="135" r="3" fill="rgba(184,151,90,0.6)"/>
-      <circle cx="210" cy="138" r="2" fill="rgba(184,151,90,0.5)"/>
-      <circle cx="225" cy="162" r="3" fill="rgba(184,151,90,0.6)"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80&fit=crop" alt="Zdrowe przepisy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
     <div class="gallery-item-overlay">
       <div class="gallery-item-label">Zdrowe przepisy</div>
     </div>
   </div>
   <div class="gallery-item">
-    <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="300" fill="#E8E0D2"/>
-      <!-- Herbs and spices flat lay -->
-      <path d="M80 200 Q120 150 100 100 Q80 150 40 170 Z" fill="rgba(44,59,45,0.6)"/>
-      <path d="M100 210 Q150 155 125 95 Q95 155 55 185 Z" fill="rgba(61,80,64,0.5)"/>
-      <path d="M60 185 Q85 140 75 95 Q60 140 25 165 Z" fill="rgba(44,59,45,0.45)"/>
-      <!-- Small jars -->
-      <rect x="220" y="100" width="50" height="70" rx="5" fill="rgba(255,255,255,0.6)"/>
-      <rect x="220" y="95" width="50" height="12" rx="3" fill="rgba(184,151,90,0.4)"/>
-      <rect x="285" y="115" width="45" height="60" rx="5" fill="rgba(255,255,255,0.5)"/>
-      <rect x="285" y="110" width="45" height="11" rx="3" fill="rgba(184,151,90,0.35)"/>
-      <!-- Powder spills -->
-      <ellipse cx="245" cy="180" rx="30" ry="10" fill="rgba(211,84,0,0.3)" transform="rotate(-10 245 180)"/>
-      <ellipse cx="310" cy="185" rx="25" ry="8" fill="rgba(184,151,90,0.4)" transform="rotate(5 310 185)"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80&fit=crop" alt="Suplementacja i zioła" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
     <div class="gallery-item-overlay">
       <div class="gallery-item-label">Suplementacja</div>
     </div>
   </div>
   <div class="gallery-item">
-    <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <rect width="400" height="300" fill="#D8D0C0"/>
-      <!-- Morning routine - coffee and notebook -->
-      <rect x="120" y="60" width="160" height="200" rx="6" fill="rgba(255,255,255,0.6)"/>
-      <rect x="135" y="75" width="130" height="3" rx="1" fill="rgba(44,59,45,0.25)"/>
-      <rect x="135" y="85" width="105" height="2" rx="1" fill="rgba(44,59,45,0.15)"/>
-      <rect x="135" y="93" width="120" height="2" rx="1" fill="rgba(44,59,45,0.2)"/>
-      <!-- Coffee cup -->
-      <ellipse cx="320" cy="180" rx="45" ry="18" fill="rgba(255,255,255,0.8)"/>
-      <path d="M275 165 Q320 155 365 165 L360 210 Q320 220 280 210 Z" fill="rgba(255,255,255,0.9)"/>
-      <ellipse cx="320" cy="167" rx="42" ry="15" fill="#8B6914" opacity="0.3"/>
-      <ellipse cx="320" cy="165" rx="38" ry="13" fill="#6B4F12" opacity="0.2"/>
-      <!-- Steam -->
-      <path d="M300 145 Q305 130 300 115" stroke="rgba(180,180,180,0.4)" stroke-width="2" fill="none"/>
-      <path d="M320 140 Q325 122 320 105" stroke="rgba(180,180,180,0.35)" stroke-width="2" fill="none"/>
-      <path d="M340 145 Q345 128 340 112" stroke="rgba(180,180,180,0.3)" stroke-width="2" fill="none"/>
-    </svg>
+    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80&fit=crop" alt="Zdrowy styl życia" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);">
     <div class="gallery-item-overlay">
       <div class="gallery-item-label">Styl życia</div>
     </div>
@@ -1513,6 +1553,24 @@
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // HAMBURGER MENU
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
   });
 
   const observer = new IntersectionObserver((entries) => {
