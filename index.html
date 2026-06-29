@@ -408,6 +408,10 @@
     line-height: 1;
     margin-bottom: 1.5rem;
   }
+  .service-num.emoji {
+    font-size: 2.6rem;
+    filter: grayscale(0.15) opacity(0.85);
+  }
   .service-card h3 {
     font-family: var(--serif);
     font-size: 1.5rem;
@@ -999,7 +1003,7 @@
     .about-content { padding: 4rem 2.5rem; }
 
     .services { padding: 6rem 2rem; }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
 
     .philosophy { grid-template-columns: 1fr 1fr; }
     .philosophy-content { padding: 4rem 2.5rem; }
@@ -1068,7 +1072,7 @@
     /* SERVICES MOBILE */
     .services { padding: 4rem 1.5rem; }
     .services-header { margin-bottom: 3rem; }
-    .services-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr !important; }
     .service-card { padding: 2.5rem 2rem; }
 
     /* PHILOSOPHY MOBILE */
@@ -1143,9 +1147,9 @@
   <div class="nav-logo">Agata <span>Karwowska</span></div>
   <ul class="nav-links">
     <li><a href="#o-mnie">O mnie</a></li>
-    <li><a href="#uslugi">Usługi</a></li>
+    <li><a href="#specjalizacje">Specjalizacje</a></li>
     <li><a href="#filozofia">Filozofia</a></li>
-    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#uslugi">Pakiety</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <a href="#kontakt" class="nav-cta">Umów wizytę</a>
@@ -1157,9 +1161,9 @@
 <!-- MOBILE MENU -->
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#o-mnie">O mnie</a>
-  <a href="#uslugi">Usługi</a>
+  <a href="#specjalizacje">Specjalizacje</a>
   <a href="#filozofia">Filozofia</a>
-  <a href="#opinie">Opinie</a>
+  <a href="#uslugi">Pakiety</a>
   <a href="#kontakt">Kontakt</a>
   <a href="#kontakt" class="mobile-cta">Umów wizytę</a>
 </div>
@@ -1167,33 +1171,33 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow">Dietetyk Kliniczny & Wellness Coach</div>
+    <div class="hero-eyebrow">Dietetyk Kliniczny · Dietetyka Funkcjonalna</div>
     <h1>
-      Twoje ciało
-      <em>zasługuje</em>
-      na najlepsze.
+      Żywienie jako
+      <em>narzędzie</em>
+      terapeutyczne.
     </h1>
     <p class="hero-sub">
-      Indywidualne podejście do żywienia oparte na najnowszej wiedzy naukowej. 
-      Razem stworzymy plan, który zmieni Twoje życie — bez restrykcji, 
-      za to z pełnym zdrowiem i energią.
+      Holistyczne podejście do Twojego zdrowia. Szukam przyczyny dolegliwości, 
+      a nie tylko łagodzenia objawów — bez sztywnych jadłospisów, 
+      za to z elastycznymi zaleceniami, które wdrożysz w realnym życiu.
     </p>
     <div class="hero-actions">
-      <a href="#kontakt" class="btn-primary">Rozpocznij zmianę</a>
+      <a href="#kontakt" class="btn-primary">Umów konsultację</a>
       <a href="#o-mnie" class="btn-ghost">Poznaj mnie</a>
     </div>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-num">800+</div>
-        <div class="hero-stat-label">Pacjentów</div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Konsultacji online</div>
       </div>
       <div>
-        <div class="hero-stat-num">12</div>
-        <div class="hero-stat-label">Lat doświadczenia</div>
+        <div class="hero-stat-num">3 dni</div>
+        <div class="hero-stat-label">Na podsumowanie wizyty</div>
       </div>
       <div>
-        <div class="hero-stat-num">98%</div>
-        <div class="hero-stat-label">Satysfakcji</div>
+        <div class="hero-stat-num">0</div>
+        <div class="hero-stat-label">Sztywnych jadłospisów</div>
       </div>
     </div>
   </div>
@@ -1203,8 +1207,8 @@
     </div>
     <div class="hero-img-overlay"></div>
     <div class="hero-tag">
-      <div class="hero-tag-title">Certyfikowany specjalista</div>
-      <div class="hero-tag-sub">Dietetyka kliniczna & Nutrigenomika</div>
+      <div class="hero-tag-title">Dietetyk kliniczny</div>
+      <div class="hero-tag-sub">Dietetyka funkcjonalna & gastroenterologiczna</div>
     </div>
   </div>
 </section>
@@ -1212,18 +1216,18 @@
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-inner">
-    <span class="gold">Dietetyka kliniczna</span><span>·</span>
-    <span>Nutrigenomika</span><span>·</span>
-    <span class="gold">Żywienie sportowe</span><span>·</span>
-    <span>Psychodietetyka</span><span>·</span>
-    <span class="gold">Dietoterapia</span><span>·</span>
-    <span>Medycyna stylu życia</span><span>·</span>
-    <span class="gold">Dietetyka kliniczna</span><span>·</span>
-    <span>Nutrigenomika</span><span>·</span>
-    <span class="gold">Żywienie sportowe</span><span>·</span>
-    <span>Psychodietetyka</span><span>·</span>
-    <span class="gold">Dietoterapia</span><span>·</span>
-    <span>Medycyna stylu życia</span><span>·</span>
+    <span class="gold">Dietetyka funkcjonalna</span><span>·</span>
+    <span>SIBO · IBS · GERD</span><span>·</span>
+    <span class="gold">Oś jelito–mózg</span><span>·</span>
+    <span>Zaburzenia hormonalne</span><span>·</span>
+    <span class="gold">Insulinooporność</span><span>·</span>
+    <span>Żywienie w aktywności fizycznej</span><span>·</span>
+    <span class="gold">Dietetyka funkcjonalna</span><span>·</span>
+    <span>SIBO · IBS · GERD</span><span>·</span>
+    <span class="gold">Oś jelito–mózg</span><span>·</span>
+    <span>Zaburzenia hormonalne</span><span>·</span>
+    <span class="gold">Insulinooporność</span><span>·</span>
+    <span>Żywienie w aktywności fizycznej</span><span>·</span>
   </div>
 </div>
 
@@ -1231,42 +1235,131 @@
 <section class="about" id="o-mnie">
   <div class="about-img-col">
     <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80&fit=crop" alt="Zdrowe jedzenie — dietetyka kliniczna" style="width:100%;height:100%;object-fit:cover;filter:saturate(0.85);">
-    <div class="about-badge">Certyfikowany Dietetyk</div>
+    <div class="about-badge">Dietetyk Kliniczny</div>
   </div>
   <div class="about-content fade-up">
     <div class="section-label">O mnie</div>
-    <h2>Nauka w służbie <em>Twojego zdrowia</em></h2>
+    <h2>Dietetyk kliniczny <em>z wyboru i zamiłowania</em></h2>
     <p class="about-text">
-      Jestem dyplomowaną dietetyczką kliniczną z ponad 12-letnim doświadczeniem w pracy 
-      z pacjentami o różnorodnych potrzebach żywieniowych. Ukończyłam Warszawski Uniwersytet 
-      Medyczny oraz podyplomowe studia z nutrigenomiki na Uniwersytecie Medycznym w Poznaniu.
+      Jestem dietetykiem klinicznym — z wykształcenia, z wyboru i z zamiłowania. 
+      Ukończyłam studia licencjackie oraz studia podyplomowe z zakresu dietetyki 
+      w problemach gastroenterologicznych. Regularnie uczestniczę w szkoleniach 
+      i konferencjach, bo medycyna i nauka o żywieniu nie stoją w miejscu — i ja też nie chcę.
     </p>
     <p class="about-text">
-      Wierzę, że każde ciało jest inne i każdy człowiek zasługuje na spersonalizowane 
-      podejście. Moja praca to połączenie najnowszej wiedzy naukowej z głębim szacunkiem 
-      do indywidualności pacjenta — bez schematów, bez restrykcji, z pełną empatią.
+      Wierzę, że jedzenie to coś znacznie więcej niż kalorie na talerzu. To informacja, 
+      którą każdego dnia przekazujesz swojemu ciału. To, czym się żywisz, ma fundamentalny 
+      wpływ na to, jak się czujesz — dziś, jutro i za dziesięć lat.
+    </p>
+    <p class="about-text">
+      Nie pracuję na jadłospisach — uważam, że nie sprawdzają się na dłuższą metę. 
+      Zamiast nich przygotowuję dla Ciebie zalecenia żywieniowe oraz bazę posiłków, 
+      które dają Ci elastyczność i stopniowo uczą samodzielnego komponowania posiłków. 
+      Prawdziwa zmiana to taka, którą wprowadzasz do swojego życia na stałe i która 
+      nie wymaga ciągłej pomocy dietetyka.
     </p>
     <div class="about-credentials">
       <div class="cred-item">
         <div class="cred-dot"></div>
-        Magister dietetyki klinicznej — WUM Warszawa
+        Studia licencjackie z dietetyki
       </div>
       <div class="cred-item">
         <div class="cred-dot"></div>
-        Podyplomowe studia z nutrigenomiki — UMP Poznań
+        Studia podyplomowe — dietetyka w problemach gastroenterologicznych
       </div>
       <div class="cred-item">
         <div class="cred-dot"></div>
-        Certyfikat psychodietetyki — PAN Warszawa
+        Stałe uczestnictwo w szkoleniach i konferencjach branżowych
       </div>
       <div class="cred-item">
         <div class="cred-dot"></div>
-        Członek Polskiego Towarzystwa Dietetyki
+        Konsultacje prowadzone w 100% online
       </div>
-      <div class="cred-item">
-        <div class="cred-dot"></div>
-        Wykładowca akademicki, autorka publikacji naukowych
-      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALIZATIONS -->
+<section class="services" id="specjalizacje" style="padding-bottom: 4rem;">
+  <div class="services-header fade-up">
+    <div class="section-label" style="justify-content:center; text-align:center;">Obszary specjalizacji</div>
+    <h2>W czym mogę <em>Ci pomóc</em></h2>
+    <p>Poniżej obszary, w których pracuję najczęściej — lista nigdy nie wyczerpuje wszystkiego, czym się zajmuję</p>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <h3>Schorzenia gastroenterologiczne</h3>
+      <p>SIBO, choroba refluksowa przełyku (GERD), zespół jelita drażliwego (IBS), nieswoiste choroby zapalne jelit (IBD), choroby wątroby, a także niezdiagnozowane dolegliwości przewodu pokarmowego: bóle brzucha, wzdęcia, zaburzenia rytmu wypróżnień.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <h3>Choroby sercowo-naczyniowe</h3>
+      <p>Dietoterapia w dyslipidemii, nadciśnieniu tętniczym oraz miażdżycy — wsparcie żywieniowe ukierunkowane na profilaktykę i leczenie.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <h3>Oś jelito–mózg</h3>
+      <p>Dwukierunkowy szlak komunikacji między układem pokarmowym a centralnym układem nerwowym. Jej dysfunkcja może objawiać się zaburzeniami nastroju, przewlekłym zmęczeniem, mgłą mózgową czy nadmierną reaktywnością na stres.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <h3>Zaburzenia hormonalne i płodność</h3>
+      <p>PMOS (dawniej PCOS), zaburzenia pracy tarczycy i nadnerczy, problemy z płodnością oraz dietoterapia wspierająca przygotowanie do ciąży i leczenie niepłodności.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <h3>Gospodarka węglowodanowa</h3>
+      <p>Insulinooporność, stan przedcukrzycowy, cukrzyca typu 2 — indywidualnie dopasowane podejście żywieniowe wspierające równowagę metaboliczną.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <h3>Żywienie w aktywności fizycznej</h3>
+      <p>Indywidualne wsparcie żywieniowe dla osób aktywnych — ukierunkowane na wydolność, regenerację, optymalny skład ciała i długoterminowe zdrowie metaboliczne.</p>
+    </div>
+  </div>
+  <p class="fade-up" style="text-align:center; margin-top: 3rem; font-size: 0.88rem; color: var(--text-muted); font-weight: 300;">
+    Nie widzisz swojego problemu na liście? <a href="#kontakt" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold);">Odezwij się</a> — jestem tu po to, żeby Ci pomóc, niezależnie od tego, z czym przychodzisz.
+  </p>
+</section>
+
+<!-- PROCESS -->
+<section class="services" id="wspolpraca" style="background: var(--white); padding-top: 4rem;">
+  <div class="services-header fade-up">
+    <div class="section-label" style="justify-content:center; text-align:center;">Współpraca</div>
+    <h2>Jak wygląda <em>nasza współpraca?</em></h2>
+    <p>Każda współpraca zaczyna się spokojnie i bez pośpiechu — zanim się spotkamy, chcę dobrze poznać Twoją historię</p>
+  </div>
+  <div class="services-grid fade-up" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="service-card">
+      <div class="service-num">1</div>
+      <h3>Umawiamy się na wizytę</h3>
+      <p>Konsultacje prowadzę online — możemy porozmawiać z dowolnego miejsca, w wygodnym dla Ciebie czasie.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">2</div>
+      <h3>Materiały do wypełnienia</h3>
+      <p>Po umówieniu wizyty przesyłam Ci szczegółowy kwestionariusz zdrowotny oraz dzienniczek żywieniowy. Im więcej wiem o Tobie wcześniej, tym lepiej mogę się przygotować.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">3</div>
+      <h3>Odsyłasz dokumenty i wyniki</h3>
+      <p>Wypełnione materiały przesyłasz w uzgodnionym terminie. Załączasz również wyniki badań, o które poproszę.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">4</div>
+      <h3>Konsultacja</h3>
+      <p>To serce naszej współpracy. Rozmawiamy o Twoich dolegliwościach, historii zdrowotnej, stylu życia i celach. Wspólnie wyznaczamy ścieżkę działania — dopasowaną do Ciebie, nie do szablonu.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">5</div>
+      <h3>Podsumowanie wizyty</h3>
+      <p>W ciągu 3 dni roboczych od konsultacji dostajesz pisemne podsumowanie — z wnioskami, zaleceniami i kolejnymi krokami. Przy doborze suplementacji — także indywidualne rekomendacje.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">6</div>
+      <h3>Zalecenia skrojone pod Ciebie</h3>
+      <p>Zamiast tabelki z rozpisanym każdym posiłkiem — indywidualne zalecenia z dobraną kalorycznością i makroskładnikami oraz baza posiłków, z której swobodnie korzystasz. Żadnego „musisz to zjeść o 12:00".</p>
     </div>
   </div>
 </section>
@@ -1274,46 +1367,79 @@
 <!-- SERVICES -->
 <section class="services" id="uslugi">
   <div class="services-header fade-up">
-    <div class="section-label" style="justify-content:center; text-align:center;">Oferta</div>
-    <h2>Programy <em>dopasowane</em><br>do Ciebie</h2>
-    <p>Wybierz ścieżkę, która odpowiada Twoim potrzebom i celom zdrowotnym</p>
+    <div class="section-label" style="justify-content:center; text-align:center;">Pakiety współpracy</div>
+    <h2>Wybierz <em>swoją ścieżkę</em></h2>
+    <p>Trzy pakiety dopasowane do tego, na jakim etapie jesteś i czego potrzebujesz</p>
   </div>
   <div class="services-grid fade-up">
     <div class="service-card">
-      <div class="service-num">01</div>
-      <h3>Konsultacja indywidualna</h3>
-      <p>Kompleksowa analiza Twojego stanu zdrowia, nawyków żywieniowych i stylu życia. Otrzymasz szczegółowy, spersonalizowany plan żywienia opracowany na podstawie badań i wywiadu.</p>
-      <div class="service-price">350 zł <span>/ wizyta 90 min</span></div>
+      <div class="service-num emoji">🌱</div>
+      <h3>Pakiet Podstawowy</h3>
+      <p>
+        Dla osób, które chcą zrozumieć co się dzieje w ich organizmie i zrobić pierwszy krok.<br><br>
+        • Kwestionariusz zdrowotny i dzienniczek żywieniowy przed wizytą<br>
+        • Konsultacja pierwszorazowa — min. 60 minut<br>
+        • Analiza posiadanych wyników badań<br>
+        • Pisemne podsumowanie wizyty — do 3 dni roboczych<br>
+        • Jedna możliwość kontaktu e-mailowego po wizycie
+      </p>
+      <div class="service-price">199 zł <span>/ konsultacja</span></div>
+    </div>
+    <div class="service-card" style="background: var(--gold-pale);">
+      <div class="service-num emoji">🌿</div>
+      <h3>Pakiet Zmiana</h3>
+      <p>
+        Dla osób, które chcą realnie działać i potrzebują pełnego wsparcia na starcie.<br><br>
+        • Wszystko z pakietu Podstawowego<br>
+        • Indywidualne zalecenia żywieniowe na 3 dni — kaloryczność, makro i mikroskładniki<br>
+        • Baza posiłków dopasowana do Twoich preferencji<br>
+        • Wizyta kontrolna — min. 30 minut<br>
+        • Korekta zaleceń po wizycie kontrolnej
+      </p>
+      <div class="service-price">399 zł <span>/ pakiet</span></div>
     </div>
     <div class="service-card">
-      <div class="service-num">02</div>
-      <h3>Program 3-miesięczny</h3>
-      <p>Intensywna współpraca obejmująca regularne konsultacje, monitoring postępów, modyfikację planu oraz stałe wsparcie między wizytami. Idealne rozwiązanie dla trwałej zmiany.</p>
-      <div class="service-price">2 900 zł <span>/ 3 miesiące</span></div>
+      <div class="service-num emoji">🌳</div>
+      <h3>Pakiet Kompleksowy</h3>
+      <p>
+        Dla osób z przewlekłymi problemami zdrowotnymi, które chcą kompleksowej opieki w jednym miejscu.<br><br>
+        • Wszystko z pakietu Zmiana<br>
+        • Indywidualnie dobrana suplementacja<br>
+        • Korekta zaleceń i suplementacji po wizycie kontrolnej
+      </p>
+      <div class="service-price">549 zł <span>/ pakiet</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-num">03</div>
-      <h3>Premium Wellness</h3>
-      <p>Ekskluzywny, roczny program transformacji zdrowotnej. Współpraca z dietetykiem, psychologiem i trenerem personalnym. Analiza DNA, testy mikrobiomu, indywidualny menu catering.</p>
-      <div class="service-price">18 000 zł <span>/ rok</span></div>
+  </div>
+
+  <div class="services-header fade-up" style="margin-top: 6rem; margin-bottom: 3rem;">
+    <h2 style="font-size: clamp(1.8rem, 2.5vw, 2.4rem);">Pojedyncze <em>usługi</em></h2>
+    <p>Wolisz wybrać tylko to, czego potrzebujesz?</p>
+  </div>
+  <div class="services-grid fade-up" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="service-card" style="padding: 2.2rem 1.5rem;">
+      <h3 style="font-size: 1.1rem;">Wizyta kontrolna</h3>
+      <p style="font-size: 0.75rem; margin-bottom: 1rem;">min. 30 minut</p>
+      <div class="service-price" style="font-size: 1.1rem;">99 zł</div>
     </div>
-    <div class="service-card">
-      <div class="service-num">04</div>
-      <h3>Żywienie sportowe</h3>
-      <p>Specjalistyczna dietoterapia dla sportowców amatorów i profesjonalistów. Periodyzacja żywieniowa, suplementacja, regeneracja i optymalizacja wyników sportowych.</p>
-      <div class="service-price">400 zł <span>/ wizyta 90 min</span></div>
+    <div class="service-card" style="padding: 2.2rem 1.5rem;">
+      <h3 style="font-size: 1.1rem;">Analiza wyników badań</h3>
+      <p style="font-size: 0.75rem; margin-bottom: 1rem;">&nbsp;</p>
+      <div class="service-price" style="font-size: 1.1rem;">79 zł</div>
     </div>
-    <div class="service-card">
-      <div class="service-num">05</div>
-      <h3>Psychodietetyka</h3>
-      <p>Praca z zaburzeniami odżywiania, kompulsywnym jedzeniem, emocjonalnym jedzeniem. Holistyczne podejście łączące dietetykę z elementami psychologii behawioralnej.</p>
-      <div class="service-price">380 zł <span>/ wizyta 90 min</span></div>
+    <div class="service-card" style="padding: 2.2rem 1.5rem;">
+      <h3 style="font-size: 1.1rem;">Dobór suplementacji</h3>
+      <p style="font-size: 0.75rem; margin-bottom: 1rem;">&nbsp;</p>
+      <div class="service-price" style="font-size: 1.1rem;">79 zł</div>
     </div>
-    <div class="service-card">
-      <div class="service-num">06</div>
-      <h3>Konsultacja online</h3>
-      <p>Pełnoprawna konsultacja dietetyczna prowadzona przez wideokonferencję. Wygodna forma dla osób spoza Warszawy lub preferujących zdalną współpracę z dyskrecją.</p>
-      <div class="service-price">300 zł <span>/ wizyta 60 min</span></div>
+    <div class="service-card" style="padding: 2.2rem 1.5rem;">
+      <h3 style="font-size: 1.1rem;">Baza posiłków</h3>
+      <p style="font-size: 0.75rem; margin-bottom: 1rem;">na 3 dni</p>
+      <div class="service-price" style="font-size: 1.1rem;">99 zł</div>
+    </div>
+    <div class="service-card" style="padding: 2.2rem 1.5rem;">
+      <h3 style="font-size: 1.1rem;">Baza posiłków</h3>
+      <p style="font-size: 0.75rem; margin-bottom: 1rem;">na 7 dni</p>
+      <div class="service-price" style="font-size: 1.1rem;">199 zł</div>
     </div>
   </div>
 </section>
@@ -1322,32 +1448,33 @@
 <section class="philosophy" id="filozofia">
   <div class="philosophy-content fade-up">
     <div class="section-label">Filozofia</div>
-    <h2>Żywienie to<br><em>sztuka życia,</em><br>nie restrykcja</h2>
+    <h2>Jeden, połączony<br><em>system —</em><br>nie zbiór układów</h2>
     <p class="philosophy-text">
-      Moim celem nie jest stworzenie kolejnej diety. Chcę pomóc Ci zrozumieć własne ciało 
-      i zbudować trwałą, harmonijną relację z jedzeniem — taką, która przynosi radość 
-      i pełnię zdrowia przez całe życie.
+      Organizm człowieka to genialny, precyzyjnie połączony system, w którym wszystko 
+      na siebie oddziałuje. W swojej pracy kieruję się zasadami dietetyki funkcjonalnej 
+      i holistycznego podejścia — patrzę na Ciebie całościowo, a moim celem jest znalezienie 
+      przyczyny dolegliwości, nie tylko złagodzenie objawów.
     </p>
     <div class="philosophy-pillars">
       <div class="pillar">
         <div class="pillar-icon">I</div>
         <div class="pillar-text">
           <h4>Indywidualizacja</h4>
-          <p>Każdy plan tworzę od podstaw, uwzględniając Twój metabolizm, genetykę i styl życia</p>
+          <p>Nie wierzę w diety dla wszystkich. To, co pomogło koleżance, może być dla Ciebie zupełnie nieodpowiednie</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">N</div>
+        <div class="pillar-icon">P</div>
         <div class="pillar-text">
-          <h4>Nauka</h4>
-          <p>Opieram się wyłącznie na potwierdzonych dowodach naukowych i aktualnej wiedzy medycznej</p>
+          <h4>Przyczyna, nie objaw</h4>
+          <p>Żywienie to jedno z najpotężniejszych narzędzi terapeutycznych — może przywrócić równowagę metaboliczną i wsparć leczenie</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">E</div>
+        <div class="pillar-icon">C</div>
         <div class="pillar-text">
-          <h4>Empatia</h4>
-          <p>Twoje doświadczenia i trudności są dla mnie fundamentem — nie oceniam, pomagam</p>
+          <h4>Całościowe podejście</h4>
+          <p>Twój organizm, dolegliwości, styl życia i cele — to wszystko biorę pod uwagę, zamiast działać według szablonu</p>
         </div>
       </div>
     </div>
@@ -1356,68 +1483,8 @@
     <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&q=80&fit=crop" alt="Filozofia zdrowego żywienia" style="width:100%;height:100%;object-fit:cover;">
     <div class="philosophy-visual-overlay"></div>
     <div class="philosophy-quote">
-      <p>„Zdrowie nie jest stanem — to codzienna, świadoma decyzja."</p>
+      <p>„Fundamentem optymalnego funkcjonowania każdej komórki jest to, co trafia na Twój talerz."</p>
       <cite>— Agata Karwowska</cite>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="opinie">
-  <div class="testimonials-header fade-up">
-    <div class="section-label" style="justify-content:center; text-align:center;">Opinie</div>
-    <h2>Co mówią moi <em>pacjenci</em></h2>
-  </div>
-  <div class="testimonials-grid fade-up">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-      </div>
-      <p class="testimonial-text">
-        „Pani Agata zmieniła moje podejście do jedzenia na zawsze. Nie byłam na diecie — 
-        uczyłam się żyć. Po 6 miesiącach schudłam 18 kg i czuję się lepiej niż w wieku 30 lat."
-      </p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">MK</div>
-        <div>
-          <div class="testimonial-name">Magdalena Kowalczyk</div>
-          <div class="testimonial-role">Pacjentka od 2022 roku</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-      </div>
-      <p class="testimonial-text">
-        „Jako sportowiec potrzebowałem specjalisty, który rozumie moje potrzeby. 
-        Program żywienia opracowany przez panią Agatę poprawił moje wyniki o ponad 15%. 
-        Profesjonalizm na najwyższym poziomie."
-      </p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">PW</div>
-        <div>
-          <div class="testimonial-name">Piotr Wiśniewski</div>
-          <div class="testimonial-role">Triathlonista amator</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">
-        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
-      </div>
-      <p class="testimonial-text">
-        „Zmagałam się z insulinoopornością przez lata. Podejście pani Agaty — 
-        naukowe, ale pełne zrozumienia — sprawia, że w końcu widzę realne efekty. 
-        Moje wyniki badań są teraz wzorowe."
-      </p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">AN</div>
-        <div>
-          <div class="testimonial-name">Anna Nowak</div>
-          <div class="testimonial-role">Pacjentka od 2021 roku</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1459,11 +1526,11 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="section-label fade-up" style="justify-content:center; text-align:center;">Zacznij teraz</div>
-  <h2 class="fade-up">Gotowa na <em>zmianę,</em><br>która trwa?</h2>
+  <h2 class="fade-up">Gotowa znaleźć <em>przyczynę,</em><br>nie tylko objaw?</h2>
   <p class="fade-up">Pierwsze kroki zawsze są najtrudniejsze — ja jestem tu, żeby Ci pomóc je zrobić.</p>
   <div class="cta-actions fade-up">
-    <a href="#kontakt" class="btn-large">Umów pierwszą wizytę</a>
-    <a href="tel:+48600123456" class="btn-outline">+48 600 123 456</a>
+    <a href="#kontakt" class="btn-large">Umów konsultację online</a>
+    <a href="mailto:agata@karwowska-dietetyk.pl" class="btn-outline">Napisz e-mail</a>
   </div>
 </section>
 
@@ -1476,8 +1543,8 @@
       <div class="contact-item">
         <div class="contact-item-icon">✦</div>
         <div>
-          <div class="contact-item-label">Adres gabinetu</div>
-          <div class="contact-item-value">ul. Nowy Świat 42, 00-363 Warszawa</div>
+          <div class="contact-item-label">Forma konsultacji</div>
+          <div class="contact-item-value">100% online — z dowolnego miejsca</div>
         </div>
       </div>
       <div class="contact-item">
@@ -1497,8 +1564,8 @@
       <div class="contact-item">
         <div class="contact-item-icon">◷</div>
         <div>
-          <div class="contact-item-label">Godziny przyjęć</div>
-          <div class="contact-item-value">Pon–Pt: 9:00–19:00 | Sob: 10:00–14:00</div>
+          <div class="contact-item-label">Podsumowanie wizyty</div>
+          <div class="contact-item-value">W ciągu 3 dni roboczych po konsultacji</div>
         </div>
       </div>
     </div>
@@ -1522,12 +1589,10 @@
     <div class="form-group">
       <label>Interesuje mnie</label>
       <select>
-        <option>Konsultacja indywidualna</option>
-        <option>Program 3-miesięczny</option>
-        <option>Premium Wellness</option>
-        <option>Żywienie sportowe</option>
-        <option>Psychodietetyka</option>
-        <option>Konsultacja online</option>
+        <option>Pakiet Podstawowy — 199 zł</option>
+        <option>Pakiet Zmiana — 399 zł</option>
+        <option>Pakiet Kompleksowy — 549 zł</option>
+        <option>Pojedyncza usługa / inne</option>
       </select>
     </div>
     <div class="form-group">
