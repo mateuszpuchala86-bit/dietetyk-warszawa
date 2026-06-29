@@ -881,6 +881,9 @@
     align-items: center;
     justify-content: space-between;
   }
+  .footer-socials {
+    padding-right: 11rem;
+  }
   .footer-logo {
     font-family: var(--serif);
     font-size: 1.1rem;
@@ -1120,6 +1123,10 @@
       text-align: center;
       padding: 2rem 1.5rem;
     }
+    .footer-socials {
+      padding-right: 0;
+      margin-bottom: 1rem;
+    }
     .footer-copy { order: 3; }
   }
 
@@ -1138,9 +1145,96 @@
     .cta-section h2 { font-size: 2.2rem; }
     .philosophy-content h2 { font-size: 1.8rem; }
   }
+
+  /* =====================
+     STICKY CALL BUTTON
+  ===================== */
+  .call-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--forest);
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 1.6rem;
+    border-radius: 999px;
+    box-shadow: 0 8px 28px rgba(44,59,45,0.35);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .call-fab:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(184,151,90,0.4);
+  }
+  .call-fab-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .call-fab-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--white);
+  }
+  .call-fab-pulse {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid var(--gold-light);
+    animation: call-pulse 2.2s ease-out infinite;
+  }
+  @keyframes call-pulse {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    70% { transform: scale(1.6); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .call-fab-text strong {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+  .call-fab-text span {
+    display: block;
+    font-size: 0.65rem;
+    opacity: 0.75;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .call-fab {
+      bottom: 1.2rem;
+      right: 1.2rem;
+      padding: 0.85rem 1.1rem;
+    }
+    .call-fab-text span { display: none; }
+    .call-fab-text strong { font-size: 0.85rem; }
+  }
 </style>
 </head>
 <body>
+
+<!-- STICKY CALL BUTTON -->
+<a href="tel:+48531077177" class="call-fab" aria-label="Zadzwoń: 531 077 177">
+  <span class="call-fab-icon">
+    <span class="call-fab-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/></svg>
+  </span>
+  <span class="call-fab-text">
+    <strong>531 077 177</strong>
+    <span>Umów spotkanie</span>
+  </span>
+</a>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -1558,7 +1652,7 @@
         <div class="contact-item-icon">☎</div>
         <div>
           <div class="contact-item-label">Telefon</div>
-          <div class="contact-item-value">+48 600 123 456</div>
+          <div class="contact-item-value">+48 531 077 177</div>
         </div>
       </div>
       <div class="contact-item">
